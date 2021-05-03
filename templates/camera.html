@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, intial_scale=1.0">
+    <style>
+      *{
+        box-sizing: border-box;
+        font-family: "Lucida Sans", sans-serif;
+      }
+
+      body{
+        font-family: "Lucida Sans", sans-serif;
+      }
+
+      /*Style the header*/
+      .header{
+        grid-area: header;
+        background-color: lightslategrey;
+        color: white;
+        padding: 15px;
+        text-align: center;
+        font-size: 25px;
+      }
+
+      /*Grid Container*/
+      .grid-container{
+        display: grid;
+        grid-template-areas: 
+          'header header header header'
+          'menu main main main'
+          'footer footer footer footer';
+    
+        grid-column-gap: 5px;
+
+        .main{
+          grid-area: right;
+          padding: 10px;
+          height: 250px;
+        }
+
+        .menu{
+          grid-area: main;
+        }
+
+      /*Style the footer */
+      .footer{
+        grid-area: footer;
+        background-color: red;
+        color: white;
+        padding: 10px;
+        text-align: center
+      }
+
+      /*Responsive layout for column to stack on top*/
+      @media(max-width: 300px){
+        .grid-container{
+          grid-template-areas: 
+            'header header header header'
+            'menu menu menu menu'
+            'main main main main'
+            'footer footer footer footer';
+        }
+      }
+        
+      /*Video responsive*/
+      .responsive{
+        max-width: 80%;
+        height: auto;
+      }
+      
+    </style>
+    <title>Engagement Detector</title>
+  </head>
+
+
+  <body>
+    <div class='grid-container'>
+      <div class='header'>
+        <h2>Student Engagement Detector</h2>
+      </div>
+
+      <div class="menu">
+        <ul><a href="/">Home</a></ul>
+        <ul><a href="/save">Save Result</a></ul>
+      </div>
+
+      <div class="main" style="background-color: lightgrey;">
+        <img id="bg" class="responsive" src="{{ url_for('video_feed') }}">
+        
+      </div>
+
+
+
+    </div>
+
+    
+  </body>
+</html>
