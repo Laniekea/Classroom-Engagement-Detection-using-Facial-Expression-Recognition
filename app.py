@@ -18,16 +18,16 @@ import sqlite3
 import time 
 
 # Flask upload video
-UPLOAD_FOLDER = 'D:/FYP/Prototype/'
+UPLOAD_FOLDER = 'D:/Prototype'
 ALLOWED_EXTENSIONS = {'mp4'}
 
 # Define emotion category, engagemnet mapping and load model
 emotions = ('angry', 'disgust', 'fear', 'happy', 'sad', 'surprise', 'neutral')
 Engagement = {'surprise': 'strong', 'angry':'high','fear':'high', 'happy':'medium','disgust':'medium','sad':'low','neutral':'disengaged'}
-model = load_model("D:/FYP/Prototype/FER2013.hdf5")
+model = load_model("D:/model.hdf5")
 
 # Load face detector
-face_cascade = cv2.CascadeClassifier('D:/FYP/Prototype/haarcascade_frontalface_default.xml')
+face_cascade = cv2.CascadeClassifier('D:/haarcascade_frontalface_default.xml')
 
 # Database
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
