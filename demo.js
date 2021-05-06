@@ -1,11 +1,7 @@
-import React from 'react'
+import React from "react";
 
 const GitDemo = () => {
-    return (
-        <div>
-            Hello World
-        </div>
-    )
-}
+  return <div>Hello Miras</div>;
+};
 
-export default GitDemo
+export default GitDemo;
