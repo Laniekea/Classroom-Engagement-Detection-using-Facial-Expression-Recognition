@@ -4,4 +4,4 @@ Student engagement is a key concept in education. Facial expression of individua
 The highest classification accuracy was **70.44%** using ensemble of five deep CNN based on hard voting, followed by **68.99%** using a shallow CNN. Some techniques such as haarcascade face detector, data augmentation, mix-max normalization, histogram equalization were used.   
 A simple web app is built to demonstrate the expression-based engagement detector using **Flask** as backend and **SQLite** as database to store the results.
 
-Convolutional Neural Network is faster than Ensemble Model.
+No i dont want this line now.
