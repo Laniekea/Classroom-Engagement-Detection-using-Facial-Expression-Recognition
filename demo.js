@@ -1,7 +1,7 @@
 import React from "react";
 
 const GitDemo = () => {
-  return <div>Hello Miras</div>;
+  return <div>Hello Jing</div>;
 };
 
 export default GitDemo;
